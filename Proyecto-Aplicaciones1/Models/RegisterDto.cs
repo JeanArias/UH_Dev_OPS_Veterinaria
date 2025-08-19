@@ -29,3 +29,4 @@ namespace Proyecto_Aplicaciones1.Models
         public string ConfirmarContraseña { get; set; }
     }
 }
+
