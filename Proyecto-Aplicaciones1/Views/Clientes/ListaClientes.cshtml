@@ -1,0 +1,192 @@
+﻿@* Archivo: Views/ClientesWeb/ListaClientes.cshtml *@
+@{
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+    ViewData["Title"] = "Ver Clientes";
+}
+
+<div class="page-heading">
+</div>
+<div class="page-content fade-in-up">
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="ibox-title">Lista de Clientes</div>
+        </div>
+        <div class="ibox-body">
+            <table class="table table-striped table-bordered table-hover" id="table-clientes" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cliente in ViewBag.Clientes)
+                    {
+                        @* AÑADIMOS UN ID A LA FILA PARA PODER ENCONTRARLA CON JS *@
+                        <tr id="cliente-row-@cliente.Id">
+                            <td>@cliente.Nombre @cliente.Apellido</td>
+                            <td>@cliente.Correo</td>
+                            <td>@cliente.Telefono</td>
+                            <td>@cliente.Direccion</td>
+                            <td>
+                                @* CAMBIAMOS LOS ENLACES POR BOTONES QUE LLAMAN A FUNCIONES JS *@
+                                <button class="btn btn-primary btn-sm" onclick="abrirModalEditar(@cliente.Id)">
+                                    <i class="fa fa-pencil"></i> Editar
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="confirmarEliminar(@cliente.Id)">
+                                    <i class="fa fa-trash"></i> Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Cliente</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" id="editClienteId">
+
+                    <div class="mb-3">
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editNombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="editApellido" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editCorreo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editTelefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="editTelefono" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="editDireccion" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // URL base de tu API (¡Asegúrate que sea la correcta!)
+        const apiBaseUrl = 'https://localhost:7275/api/Clientes';
+
+        // 🗑️ FUNCIÓN PARA ELIMINAR
+        function confirmarEliminar(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esta acción!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, ¡eliminar!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Si el usuario confirma, hacemos la petición DELETE a la API
+                    fetch(`${apiBaseUrl}/${id}`, {
+                        method: 'DELETE'
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Si la API responde OK, mostramos alerta y eliminamos la fila de la tabla
+                            Swal.fire('¡Eliminado!', 'El cliente ha sido eliminado.', 'success');
+                            // Eliminamos la fila de la tabla con una animación
+                            document.getElementById(`cliente-row-${id}`).remove();
+                        } else {
+                            // Si hay un error, lo mostramos
+                            Swal.fire('Error', 'No se pudo eliminar el cliente.', 'error');
+                        }
+                    });
+                }
+            });
+        }
+
+        // ✏️ FUNCIÓN PARA ABRIR EL MODAL DE EDICIÓN
+        function abrirModalEditar(id) {
+            // Hacemos una petición GET a la API para obtener los datos actuales del cliente
+            fetch(`${apiBaseUrl}/${id}`)
+                .then(response => response.json())
+                .then(cliente => {
+                    // Llenamos el formulario del modal con los datos obtenidos
+                    document.getElementById('editClienteId').value = cliente.id;
+                    document.getElementById('editNombre').value = cliente.nombre;
+                    document.getElementById('editApellido').value = cliente.apellido;
+                    document.getElementById('editCorreo').value = cliente.correo;
+                    document.getElementById('editTelefono').value = cliente.telefono;
+                    document.getElementById('editDireccion').value = cliente.direccion;
+
+                    // Mostramos el modal usando jQuery (ya que Bootstrap depende de él)
+                    $('#editModal').modal('show');
+                })
+                .catch(error => console.error('Error al cargar datos del cliente:', error));
+        }
+
+        // ✨ FUNCIÓN PARA GUARDAR LOS CAMBIOS
+        function guardarCambios() {
+            const id = document.getElementById('editClienteId').value;
+            const clienteActualizado = {
+                id: parseInt(id),
+                nombre: document.getElementById('editNombre').value,
+                apellido: document.getElementById('editApellido').value,
+                correo: document.getElementById('editCorreo').value,
+                telefono: document.getElementById('editTelefono').value,
+                direccion: document.getElementById('editDireccion').value,
+            };
+
+            // Hacemos una petición PUT a la API para guardar los cambios
+            fetch(`${apiBaseUrl}/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(clienteActualizado)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Si la API responde OK, cerramos el modal, mostramos alerta y actualizamos la tabla
+                    $('#editModal').modal('hide');
+                    Swal.fire('¡Guardado!', 'Los cambios han sido guardados.', 'success');
+
+                    // Actualizamos la fila en la tabla sin recargar la página
+                    const row = document.getElementById(`cliente-row-${id}`);
+                    row.cells[0].innerText = `${clienteActualizado.nombre} ${clienteActualizado.apellido}`;
+                    row.cells[1].innerText = clienteActualizado.correo;
+                    row.cells[2].innerText = clienteActualizado.telefono;
+                    row.cells[3].innerText = clienteActualizado.direccion;
+                } else {
+                    Swal.fire('Error', 'No se pudieron guardar los cambios.', 'error');
+                }
+            });
+        }
+    </script>

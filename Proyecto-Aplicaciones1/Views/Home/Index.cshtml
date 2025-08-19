@@ -1,0 +1,388 @@
+﻿@model Proyecto_Aplicaciones1.Models.AuthViewModel
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+    /* ... Tus estilos CSS ... */
+    .auth-container {
+        max-width: 500px;
+        margin: 60px auto;
+        background-color: white;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo {
+        max-width: 100px;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .toggle-password {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+        color: #6c757d;
+    }
+
+    .form-outline {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        color: #6c757d;
+    }
+
+    .form-control {
+        padding-left: 2.5rem;
+    }
+
+    .alert ul { /* Para que las listas de errores se vean bien */
+        margin-bottom: 0;
+        padding-left: 1.5rem;
+    }
+</style>
+
+<div class="text-center">
+    <img src="~/veteriniaria-removebg-preview.png" class="logo" alt="Logo" />
+    <h3 class="text-center">Bienvenido</h3>
+</div>
+
+<div class="auth-container text-center">
+
+    <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active d-flex align-items-center justify-content-center gap-2" id="tab-login"
+               data-mdb-pill-init href="#pills-login" role="tab"
+               aria-controls="pills-login" aria-selected="true">
+                <i class="fas fa-sign-in-alt"></i> Iniciar Sesion
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link d-flex align-items-center justify-content-center gap-2" id="tab-register"
+               data-mdb-pill-init href="#pills-register" role="tab"
+               aria-controls="pills-register" aria-selected="false">
+                <i class="fas fa-user-plus"></i> Registro
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            @using (Html.BeginForm("Login", "Cuenta", FormMethod.Post))
+            {
+                @* Mostrar alerta de éxito si existe TempData["LoginSuccess"] *@
+                @if (TempData["LoginSuccess"] != null)
+                {
+                    <div class="alert alert-success text-start alert-dismissible fade show" role="alert">
+                        @TempData["LoginSuccess"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                @* Mostrar alerta de error si existe TempData["LoginError"] *@
+                @if (TempData["LoginError"] != null)
+                {
+                    <div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+                        @TempData["LoginError"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                <div class="input-group mb-4">
+                    <span class="input-group-text">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <div class="form-outline w-100" data-mdb-input-init>
+                        @Html.TextBoxFor(m => m.Login.username, new { @class = "form-control" })
+                        @Html.LabelFor(m => m.Login.username, htmlAttributes: new { @class = "form-label" })
+                        @Html.ValidationMessageFor(m => m.Login.username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <div class="form-outline w-100 position-relative" data-mdb-input-init>
+                        @Html.PasswordFor(m => m.Login.contraseña, new { @class = "form-control", id = "Login_Contraseña" })
+                        @Html.LabelFor(m => m.Login.contraseña, htmlAttributes: new { @class = "form-label" })
+                        <span class="toggle-password" onclick="togglePassword('Login_Contraseña', 'eyeLogin')">
+                            <i id="eyeLogin" class="fas fa-eye"></i>
+                        </span>
+                        @Html.ValidationMessageFor(m => m.Login.contraseña, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-start">
+                        <div class="form-check mb-3 mb-md-0">
+                            @* Puedes agregar un checkbox de "Recordarme" aquí si lo deseas *@
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalRecuperarPassword">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mb-4" data-mdb-button-init>
+                    Iniciar sesión
+                </button>
+            }
+        </div>
+     
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalRecuperarPassword" tabindex="-1" aria-labelledby="modalRecuperarPasswordLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <form id="formRecuperarPassword">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalRecuperarPasswordLabel">Recuperar contraseña</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="inputCorreo" name="correo" placeholder="Correo electrónico" required />
+                                <label for="inputCorreo">Correo electrónico</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+            <form id="registroForm">
+                @Html.AntiForgeryToken()
+
+                <div id="registerAlertContainer"></div>
+                <div id="registerSuccessContainer"></div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <div class="form-outline w-100" data-mdb-input-init>
+                        @Html.TextBoxFor(m => m.Register.Nombre, new { @class = "form-control" })
+                        @Html.LabelFor(m => m.Register.Nombre, new { @class = "form-label" })
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <div class="form-outline w-100" data-mdb-input-init>
+                        @Html.TextBoxFor(m => m.Register.Apellidos, new { @class = "form-control" })
+                        @Html.LabelFor(m => m.Register.Apellidos, new { @class = "form-label" })
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <div class="form-outline w-100" data-mdb-input-init>
+                        @Html.TextBoxFor(m => m.Register.Correo, new { @class = "form-control", type = "email" })
+                        @Html.LabelFor(m => m.Register.Correo, new { @class = "form-label" })
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-user-circle"></i></span>
+                    <div class="form-outline w-100" data-mdb-input-init>
+                        @Html.TextBoxFor(m => m.Register.Username, new { @class = "form-control" })
+                        @Html.LabelFor(m => m.Register.Username, new { @class = "form-label" })
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <div class="form-outline w-100 position-relative" data-mdb-input-init>
+                        @Html.PasswordFor(m => m.Register.Contraseña, new { @class = "form-control", id = "registerPassword" })
+                        @Html.LabelFor(m => m.Register.Contraseña, new { @class = "form-label" })
+                        <span class="toggle-password" onclick="togglePassword('registerPassword', 'eyeRegister')">
+                            <i id="eyeRegister" class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <div class="form-outline w-100 position-relative" data-mdb-input-init>
+                        @Html.PasswordFor(m => m.Register.ConfirmarContraseña, new { @class = "form-control", id = "registerRepeatPassword" })
+                        @Html.LabelFor(m => m.Register.ConfirmarContraseña, new { @class = "form-label" })
+                        <span class="toggle-password" onclick="togglePassword('registerRepeatPassword', 'eyeRepeat')">
+                            <i id="eyeRepeat" class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mb-3">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+        document.getElementById('formRecuperarPassword').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const correo = document.getElementById('inputCorreo').value;
+        const resp = await fetch('/Cuenta/RecuperarPassword', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `correo=${encodeURIComponent(correo)}`
+        });
+        const data = await resp.json();
+
+        // Usamos SweetAlert2 para mostrar el mensaje
+        if (data.success) {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Correo enviado!',
+                text: data.message,
+            });
+            document.getElementById('formRecuperarPassword').reset();
+            var modal = bootstrap.Modal.getInstance(document.getElementById('modalRecuperarPassword'));
+            modal.hide();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: data.message,
+            });
+        }
+    });
+</script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+<script>
+    function togglePassword(inputId, iconId) {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            input.type = "password";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
+        }
+    }
+</script>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            function showBootstrapAlert(containerId, message, type) {
+                var alertClass = 'alert-' + type;
+                var alertHtml = '<div class="alert ' + alertClass + ' alert-dismissible fade show" role="alert">' +
+                                    message +
+                                    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+                                '</div>';
+                $('#' + containerId).html(alertHtml);
+            }
+
+            function clearAlerts(containerId) {
+                $('#' + containerId).empty();
+            }
+
+            $('#registroForm').submit(function (event) {
+                event.preventDefault();
+
+                clearAlerts('registerAlertContainer');
+                clearAlerts('registerSuccessContainer');
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    url: '@Url.Action("Registro", "Cuenta")',
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    beforeSend: function() {
+                        // Opcional: mostrar un spinner o deshabilitar el botón
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            showBootstrapAlert('registerSuccessContainer', response.message, 'success');
+                            $('#registroForm')[0].reset();
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        var response = jqXHR.responseJSON;
+                        var finalErrorMessage = '';
+
+                        if (response && response.type === 'validation' && response.messages) {
+                            var errorHtmlList = '<ul>';
+                            $.each(response.messages, function (index, message) {
+                                errorHtmlList += '<li>' + message + '</li>';
+                            });
+                            errorHtmlList += '</ul>';
+                            finalErrorMessage = (response.title ? '<strong>' + response.title + '</strong><br>' : '') + errorHtmlList;
+                        } else if (response && response.message) {
+                            finalErrorMessage = (response.title ? '<strong>' + response.title + '</strong><br>' : '') + response.message;
+                        } else {
+                            finalErrorMessage = 'Ocurrió un error inesperado al procesar su solicitud.';
+                            console.error("AJAX Error:", textStatus, errorThrown, jqXHR);
+                        }
+                        showBootstrapAlert('registerAlertContainer', finalErrorMessage, 'danger');
+                    }
+                });
+            });
+
+            function activateTab(tabId) {
+                $('.nav-link').removeClass('active').attr('aria-selected', 'false');
+                $('.tab-pane').removeClass('show active');
+
+                $('#tab-' + tabId).addClass('active').attr('aria-selected', 'true');
+                $('#pills-' + tabId).addClass('show active');
+            }
+
+            var activeTabFromTempData = '@(TempData["ActiveTab"] != null ? TempData["ActiveTab"].ToString() : "")'; // Asegurar que sea string
+            if (activeTabFromTempData) {
+                activeTabFromTempData = activeTabFromTempData.replace(/^"|"$/g, '');
+                if (activeTabFromTempData === 'login') {
+                    activateTab('login');
+                }
+            } else {
+                activateTab('login'); // Por defecto, activar la pestaña de login
+            }
+
+            // Si hay un mensaje de éxito o error en TempData (después de una redirección),
+            // queremos asegurarnos de que la alerta se muestre si la pestaña de login está activa.
+            // Para TempData["LoginSuccess"] y TempData["LoginError"] en el Login, ya se maneja directamente en Razor.
+            // No se necesita JS adicional aquí para estas alertas específicas ya que se renderizan con la página.
+        });
+    </script>
+}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabLinks = document.querySelectorAll('[data-mdb-pill-init]');
+      tabLinks.forEach(tab => {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          tabLinks.forEach(link => {
+            link.classList.remove('active');
+            document.querySelector(link.getAttribute('href')).classList.remove('show', 'active');
+          });
+
+          tab.classList.add('active');
+          const target = document.querySelector(tab.getAttribute('href'));
+          target.classList.add('show', 'active');
+        });
+      });
+    });
+</script>

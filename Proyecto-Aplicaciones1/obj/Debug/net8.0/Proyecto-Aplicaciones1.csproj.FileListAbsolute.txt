@@ -1,0 +1,138 @@
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.runtime.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.endpoints.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.exe
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.deps.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.runtimeconfig.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfoInputs.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfo.cs
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.CoreCompileInputs.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cs
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\bundle\Proyecto-Aplicaciones1.styles.css
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\projectbundle\Proyecto-Aplicaciones1.bundle.scp.css
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\refint\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.genruntimeconfig.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\ref\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\jonat\source\repos\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto.1CCE46AB.Up2Date
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.runtime.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.exe
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.deps.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.runtimeconfig.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cs
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.Proyecto-Aplicaciones1.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.build.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\bundle\Proyecto-Aplicaciones1.styles.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\projectbundle\Proyecto-Aplicaciones1.bundle.scp.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto.1CCE46AB.Up2Date
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\refint\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Proyecto Final\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\ref\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.runtime.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.exe
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.deps.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.runtimeconfig.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cs
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.Proyecto-Aplicaciones1.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.build.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Proyecto-Aplicaciones1.props
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\bundle\Proyecto-Aplicaciones1.styles.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\projectbundle\Proyecto-Aplicaciones1.bundle.scp.css
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto.1CCE46AB.Up2Date
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\refint\Proyecto-Aplicaciones1.dll
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.genruntimeconfig.cache
+C:\Users\Usuario\Downloads\UH\8 Cuatri\Desarrollo de Aplicaciones\Expendiente Médico\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\ref\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\appsettings.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.endpoints.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.staticwebassets.runtime.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.exe
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.deps.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.runtimeconfig.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.AssemblyReference.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfoInputs.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.AssemblyInfo.cs
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.csproj.CoreCompileInputs.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.RazorAssemblyInfo.cs
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\bundle\Proyecto-Aplicaciones1.styles.css
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\scopedcss\projectbundle\Proyecto-Aplicaciones1.bundle.scp.css
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto.1CCE46AB.Up2Date
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\refint\Proyecto-Aplicaciones1.dll
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.pdb
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\Proyecto-Aplicaciones1.genruntimeconfig.cache
+C:\Users\jonat\Desktop\Nueva carpeta (6)\Proyecto-Aplicaciones1\Proyecto-Aplicaciones1\obj\Debug\net8.0\ref\Proyecto-Aplicaciones1.dll

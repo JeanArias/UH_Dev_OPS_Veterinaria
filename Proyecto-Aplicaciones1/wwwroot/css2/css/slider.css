@@ -1,0 +1,83 @@
+﻿
+/* Botones de navegación para las miniaturas (opcional) */
+.thumbnail-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+    .thumbnail-nav.prev {
+        left: 0;
+    }
+
+    .thumbnail-nav.next {
+        right: 0;
+    }
+.property-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden sin romper */
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 15px;
+    margin-top: 1px;
+    margin-bottom: -25px;
+}
+
+.listing-address-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Evita que el icono y el texto se separen */
+    gap: 5px; /* Espacio entre icono y texto */
+}
+
+.listing-address {
+  
+    color: #888;
+    margin-top: 0;
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+}
+
+@media (max-width: 430) {
+    .property-info-wrapper {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: flex-start; /* Asegura una alineación adecuada */
+    }
+
+    .listing-address-container {
+        width: 100%; /* Evita que el texto colapse innecesariamente */
+    }
+
+    .property-actions {
+       position:relative;
+        margin-top: -22px; /* Espaciado entre ubicación y acciones */
+        left:300px;
+    }
+}
+
+@media (max-width: 768) {
+    .property-info-wrapper {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: flex-start; /* Asegura una alineación adecuada */
+    }
+
+    .listing-address-container {
+        width: 100%; /* Evita que el texto colapse innecesariamente */
+    }
+
+    .property-actions {
+        position: relative;
+        margin-top: -22px; /* Espaciado entre ubicación y acciones */
+        left: 600px;
+    }
+}

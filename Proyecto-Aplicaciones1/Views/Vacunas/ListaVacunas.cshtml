@@ -1,0 +1,170 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+    ViewData["Title"] = "Lista de Vacunas";
+}
+
+<div class="page-content fade-in-up mt-3">
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="ibox-title">Lista de Vacunas</div>
+        </div>
+        <div class="ibox-body">
+            <table class="table table-striped table-bordered table-hover" id="table-vacunas" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Tipo Vacuna</th>
+                        <th>Fecha</th>
+                        <th>Observaciones</th>
+                        <th>ExpedienteId</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.Vacunas != null)
+                    {
+                        foreach (var vacuna in ViewBag.Vacunas)
+                        {
+                            <tr id="vacuna-row-@vacuna.Id">
+                                <td>@vacuna.TipoVacuna</td>
+                                <td>@vacuna.FechaVacuna.ToShortDateString()</td>
+                                <td>@vacuna.Observaciones</td>
+                                <td>@vacuna.ExpedienteId</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm" onclick="abrirModalEditar(@vacuna.Id)">
+                                        <i class="fa fa-pencil"></i> Editar
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" onclick="confirmarEliminar(@vacuna.Id)">
+                                        <i class="fa fa-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Vacuna</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" id="editVacunaId" />
+                    <div class="mb-3">
+                        <label for="editTipoVacuna" class="form-label">Tipo de Vacuna</label>
+                        <input type="text" class="form-control" id="editTipoVacuna" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editFechaVacuna" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="editFechaVacuna" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editObservaciones" class="form-label">Observaciones</label>
+                        <textarea class="form-control" id="editObservaciones" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editExpedienteId" class="form-label">ExpedienteId</label>
+                        <input type="number" class="form-control" id="editExpedienteId" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button class="btn btn-primary" onclick="guardarCambios()">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        const apiVacunasUrl = 'https://localhost:7275/api/Vacunaciones';
+
+        function confirmarEliminar(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esta acción!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`${apiVacunasUrl}/${id}`, {
+                        method: 'DELETE'
+                    }).then(response => {
+                        if (response.ok) {
+                            Swal.fire('¡Eliminada!', 'La vacuna ha sido eliminada.', 'success');
+                            document.getElementById(`vacuna-row-${id}`).remove();
+                        } else {
+                            Swal.fire('Error', 'No se pudo eliminar la vacuna.', 'error');
+                        }
+                    });
+                }
+            });
+        }
+
+        async function abrirModalEditar(id) {
+            const response = await fetch(`${apiVacunasUrl}/${id}`);
+            const vacuna = await response.json();
+
+            document.getElementById('editVacunaId').value = vacuna.id;
+            document.getElementById('editTipoVacuna').value = vacuna.tipoVacuna;
+            document.getElementById('editFechaVacuna').value = vacuna.fechaVacuna.split('T')[0];
+            document.getElementById('editObservaciones').value = vacuna.observaciones;
+            document.getElementById('editExpedienteId').value = vacuna.expedienteId;
+
+            $('#editModal').modal('show');
+        }
+
+        function guardarCambios() {
+            const id = document.getElementById('editVacunaId').value;
+
+            const vacunaActualizada = {
+                id: parseInt(id),
+                tipoVacuna: document.getElementById('editTipoVacuna').value,
+                fechaVacuna: document.getElementById('editFechaVacuna').value,
+                observaciones: document.getElementById('editObservaciones').value,
+                expedienteId: parseInt(document.getElementById('editExpedienteId').value)
+            };
+
+            fetch(`${apiVacunasUrl}/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(vacunaActualizada)
+            }).then(response => {
+                if (response.ok) {
+                    $('#editModal').modal('hide');
+                    Swal.fire('¡Guardado!', 'Los cambios han sido guardados.', 'success');
+                    // Reemplazar datos directamente en la fila sin recargar:
+                    const row = document.getElementById(`vacuna-row-${id}`);
+                    row.cells[0].innerText = vacunaActualizada.tipoVacuna;
+                    row.cells[1].innerText = vacunaActualizada.fechaVacuna;
+                    row.cells[2].innerText = vacunaActualizada.observaciones;
+                    row.cells[3].innerText = vacunaActualizada.expedienteId;
+                } else {
+                    Swal.fire('Error', 'No se pudieron guardar los cambios.', 'error');
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            $('#table-vacunas').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+                }
+            });
+        });
+    </script>
+}

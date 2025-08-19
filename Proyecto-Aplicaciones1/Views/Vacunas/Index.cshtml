@@ -1,0 +1,65 @@
+﻿@model Proyecto_Aplicaciones1.Models.Vacunacion
+@{
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+    ViewData["Title"] = "Agregar Vacuna";
+}
+
+<div class="page-heading">
+    <h1 class="page-title">Agregar Vacuna</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Agregar Vacuna</li>
+    </ol>
+</div>
+
+<div class="page-content fade-in-up">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Datos de la vacuna</div>
+                </div>
+                <div class="ibox-body">
+                    <form asp-action="Agregar" asp-controller="Vacunas" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label asp-for="ExpedienteId">Número de Expediente</label>
+                                <input asp-for="ExpedienteId" class="form-control" placeholder="Ej: 1, 2, 3..." />
+                                <span asp-validation-for="ExpedienteId" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-sm-6 form-group">
+                                <label asp-for="FechaVacuna">Fecha de aplicación</label>
+                                <input asp-for="FechaVacuna" class="form-control" type="date" />
+                                <span asp-validation-for="FechaVacuna" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-sm-6 form-group">
+                                <label asp-for="TipoVacuna">Tipo de Vacuna</label>
+                                <input asp-for="TipoVacuna" class="form-control" placeholder="Ej: Antirrábica, Desparasitación" />
+                                <span asp-validation-for="TipoVacuna" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-sm-12 form-group">
+                                <label asp-for="Observaciones">Observaciones</label>
+                                <textarea asp-for="Observaciones" class="form-control" rows="3" placeholder="Detalles de la vacuna"></textarea>
+                                <span asp-validation-for="Observaciones" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success" type="submit">Guardar Vacuna</button>
+                            <a class="btn btn-danger" asp-action="ListaVacunas">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

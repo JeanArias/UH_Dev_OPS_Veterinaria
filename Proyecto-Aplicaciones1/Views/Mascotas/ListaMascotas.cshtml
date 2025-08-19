@@ -1,0 +1,225 @@
+﻿@* Archivo: Views/MascotasWeb/ListaMascotas.cshtml *@
+@{
+    Layout = "~/Views/Shared/_LayoutDashBoard.cshtml";
+    ViewData["Title"] = "Ver Mascotas";
+}
+
+@* El botón para agregar nuevas mascotas ha sido eliminado como solicitaste *@
+@*
+<div class="page-heading">
+    <a class="btn btn-success" asp-action="Agregar">
+        <i class="fa fa-plus"></i> Nueva Mascota
+    </a>
+</div>
+*@
+
+<div class="page-content fade-in-up mt-3">
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="ibox-title">Lista de Mascotas</div>
+        </div>
+        <div class="ibox-body">
+            <table class="table table-striped table-bordered table-hover" id="table-mascotas" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Raza</th>
+                        <th>Sexo</th>
+                        <th>Dueño</th> @* CORRECCIÓN: El encabezado ahora coincide con el contenido *@
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.Mascotas != null)
+                    {
+                        @foreach (var mascota in ViewBag.Mascotas)
+                        {
+                            <tr id="mascota-row-@mascota.Id">
+                                <td>@mascota.Nombre</td>
+                                <td>@mascota.Especie</td>
+                                <td>@mascota.Raza</td>
+                                <td>@mascota.Sexo</td>
+                                <td>
+                                    @mascota.NombreDueño
+                                </td>
+                               
+                                <td>
+                                    <button class="btn btn-primary btn-sm" onclick="abrirModalEditar(@mascota.Id)">
+                                        <i class="fa fa-pencil"></i> Editar
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" onclick="confirmarEliminar(@mascota.Id)">
+                                        <i class="fa fa-trash"></i> Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@* ----------- MODAL DE EDICIÓN PARA MASCOTAS ----------- *@
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Mascota</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" id="editMascotaId">
+
+                    <div class="mb-3">
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEspecie" class="form-label">Especie</label>
+                        <input type="text" class="form-control" id="editEspecie" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editRaza" class="form-label">Raza</label>
+                        <input type="text" class="form-control" id="editRaza" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editFechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="editFechaNacimiento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editSexo" class="form-label">Sexo</label>
+                        <select id="editSexo" class="form-control">
+                            <option value="Macho">Macho</option>
+                            <option value="Hembra">Hembra</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editClienteId" class="form-label">Dueño</label>
+                        <select id="editClienteId" class="form-control" required></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @* BUENA PRÁCTICA: Los scripts se colocan en su propia sección *@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const apiMascotasUrl = 'https://localhost:7275/api/Mascotas'; // <-- ¡VERIFICA ESTA URL!
+        const apiClientesUrl = 'https://localhost:7275/api/Clientes/ObtenerClientes'; // <-- ¡VERIFICA ESTA URL!
+
+        // 🗑️ FUNCIÓN PARA ELIMINAR
+        function confirmarEliminar(id) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "¡No podrás revertir esta acción!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, ¡eliminar!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`${apiMascotasUrl}/${id}`, {
+                        method: 'DELETE'
+                    }).then(response => {
+                        if (response.ok) {
+                            Swal.fire('¡Eliminada!', 'La mascota ha sido eliminada.', 'success');
+                            document.getElementById(`mascota-row-${id}`).remove();
+                        } else {
+                            Swal.fire('Error', 'No se pudo eliminar la mascota.', 'error');
+                        }
+                    });
+                }
+            });
+        }
+
+        // ✏️ FUNCIÓN PARA ABRIR EL MODAL DE EDICIÓN
+        async function abrirModalEditar(id) {
+            try {
+                const [mascotaResponse, clientesResponse] = await Promise.all([
+                    fetch(`${apiMascotasUrl}/${id}`),
+                    fetch(apiClientesUrl)
+                ]);
+
+                if (!mascotaResponse.ok || !clientesResponse.ok) {
+                    throw new Error('Error al cargar los datos de la API.');
+                }
+
+                const mascota = await mascotaResponse.json();
+                const clientes = await clientesResponse.json();
+
+                // Llenamos el formulario del modal
+                document.getElementById('editMascotaId').value = mascota.id;
+                document.getElementById('editNombre').value = mascota.nombre;
+                document.getElementById('editEspecie').value = mascota.especie;
+                document.getElementById('editRaza').value = mascota.raza;
+                document.getElementById('editFechaNacimiento').value = mascota.fechaNacimiento.split('T')[0];
+                document.getElementById('editSexo').value = mascota.sexo;
+
+                // Llenamos el dropdown de dueños
+                const selectCliente = document.getElementById('editClienteId');
+                selectCliente.innerHTML = '<option value="">Seleccione un dueño...</option>';
+                clientes.forEach(cliente => {
+                    const option = document.createElement('option');
+                    option.value = cliente.id;
+                    option.textContent = `${cliente.nombre} ${cliente.apellido}`;
+                    selectCliente.appendChild(option);
+                });
+
+                selectCliente.value = mascota.clienteId;
+
+                $('#editModal').modal('show');
+            } catch (error) {
+                console.error('Error al abrir el modal de edición:', error);
+                Swal.fire('Error', 'No se pudieron cargar los datos para editar.', 'error');
+            }
+        }
+
+        // ✨ FUNCIÓN PARA GUARDAR LOS CAMBIOS
+        function guardarCambios() {
+            const id = document.getElementById('editMascotaId').value;
+            const selectCliente = document.getElementById('editClienteId');
+            const clienteIdSeleccionado = selectCliente.value;
+            const clienteNombreSeleccionado = selectCliente.options[selectCliente.selectedIndex].text;
+
+            const mascotaActualizada = {
+                id: parseInt(id),
+                nombre: document.getElementById('editNombre').value,
+                especie: document.getElementById('editEspecie').value,
+                raza: document.getElementById('editRaza').value,
+                fechaNacimiento: document.getElementById('editFechaNacimiento').value,
+                sexo: document.getElementById('editSexo').value,
+                clienteId: parseInt(clienteIdSeleccionado)
+            };
+
+            fetch(`${apiMascotasUrl}/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(mascotaActualizada)
+            }).then(response => {
+                if (response.ok) {
+                    $('#editModal').modal('hide');
+                    Swal.fire('¡Guardado!', 'Los cambios han sido guardados.', 'success');
+
+                    const row = document.getElementById(`mascota-row-${id}`);
+                    row.cells[0].innerText = mascotaActualizada.nombre;
+                    row.cells[1].innerText = mascotaActualizada.especie;
+                    row.cells[2].innerText = mascotaActualizada.raza;
+                    row.cells[3].innerText = mascotaActualizada.sexo;
+                    row.cells[4].innerText = clienteNombreSeleccionado;
+                } else {
+                    Swal.fire('Error', 'No se pudieron guardar los cambios.', 'error');
+                }
+            });
+        }
+    </script>
